@@ -8,12 +8,18 @@ for(int i = 0; i < a.length; i++){
     temp = a[i];
   }
 }
+// a {1,2,0,100,2} b {0,1,2...1}
+//                    0 1 2 ..100
 int[] b = new int[temp+1];
-for(int n = 0; n < b.length; n++){
-  if(a[i] == n){
-    b[n]++;
+for(int n = 0; n < a.length; n++){
+    b[a[n]]++;//b[n] = b[n] + 1;
+}
+for(int c = 0; c < b.length; c++){
+  if(b[c] != 0){
+    int d = b[c];
+    while(d > 0){
+      System.out.print(c);
+      d--;
+    }
   }
 }
-
-
-  
